@@ -54,6 +54,8 @@ At the start of each run, all values are stored in a session dict in the followi
 
 ## Spec Reflection 
 
+One way the spec helped me was having the architecture diagram ready This meant that I could give Claude more context when implementing the tools and the branching logic, as the architecture diagram mapped out the session step-by-step. 
+
 A few things that I implemented differently from planning.md include how I handled the empty wardrobe case in the suggest_outfit tool. I mentioned that suggest_outfit would be skipped entirely if the user's wardrobe was not provided but the actual implementation included returning general styling advice from the LLM instead. My planning.md spec also included the step of check whether suggest_outfit returned empty before calling the next tool, create_fit_card. However, in the actual implementation the actual check wasn't needed. 
 
 ## AI Usage 
